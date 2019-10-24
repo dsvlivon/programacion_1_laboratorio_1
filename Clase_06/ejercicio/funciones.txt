@@ -1,0 +1,79 @@
+/**
+*\brief Verifica si el valor recibido esta dado entre 0 y 9 según los intervalos de codio ASCII
+*\param aux Array con la cadena a ser analizada
+*\return 1 si es numérico, 0 si no.
+*/
+isNumeric(char aux[])
+{
+	int i=0;
+	while(aux[i]!= '\0')
+	{
+		if(aux[i] < '0'|| aux[i] > '9')
+		return 0;
+		i++;
+	}
+	return 1;
+}
+//para recorrer un array con while '\0'
+
+/**
+*\brief Verifica si el valor recibido esta dado entre a y z. A y Z según los intervalos de codio ASCII
+*\param aux Array con la cadena a ser analizada
+*\return 1 si es numérico, 0 si no.
+*/
+isLetter(char aux[])
+{
+	int i=0;
+	while(aux[i]!= '\0')
+	{
+		if((aux[i]!= ' '&& (aux[i]<'a' || aux[i]>'z')&& aux[i]< 'A' || aux[i]>'Z'))
+		return 0;
+		i++;
+	}
+	return 1;
+}
+
+/**
+*\brief Verifica si el valor recibido esta dado entre a y z. A y Z. 0 y 9 según los intervalos de codio ASCII
+*\param aux Array con la cadena a ser analizada
+*\return 1 si es numérico, 0 si no.
+*/
+isAlphaNumeric(char aux[])
+{
+	int i=0;
+	while(aux[i]!= '\0')
+	{
+		if((aux[i]!= ' ') && (aux[i]<'a' || aux[i]>'z') && (aux[i]< 'A' || aux[i]>'Z') && (aux[i] < '0'|| aux[i] > '9'))
+		return 0;
+		i++;
+	}
+	return 1;
+}
+
+/**
+*\brief Verifica si el valor recibido esta dado entre a y z. A y Z. 0 y 9 según los intervalos de codio ASCII
+*\param aux Array con la cadena a ser analizada
+*\return 1 si es numérico, 0 si no.
+*/
+isTelephone(char aux[])
+{
+	int i=0;
+	int scoreCount=0;
+
+	while(aux[i]!= '\0')
+	{
+		if((aux[i]!= ' ') && (aux[i]!= '-') && (aux[i] < '0'|| aux[i] > '9'))
+		return 0;
+		if(aux[i]== '-')
+		{
+			scoreCount++;
+		}
+		if(scoreCount==1)
+		{
+			return 1;
+		}
+		return 0
+i++;
+	}
+	return 1;
+}

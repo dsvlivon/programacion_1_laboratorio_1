@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+int sumaNumeros(int* resultado);
+int main(void) {
+	int numero1;
+	int numero2;
+	int resultado;
+		printf("Ingrese un número: ");
+		scanf("%d",&numero1);
+		printf("Ingrese otro número: ");
+		scanf("%d",&numero2);
+		resultado=numero1+numero2;
+		printf("La suma de los números ingresados es %d",resultado);
+		return 0;
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
